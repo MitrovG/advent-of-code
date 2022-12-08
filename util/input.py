@@ -20,3 +20,10 @@ def read_full(filepath: str) -> str:
         data = fin.read()
 
     return data
+
+
+def read_matrix(filepath: str) -> List[List[int]]:
+    with open(filepath, 'r') as fin:
+        data = [[int(number) for number in row] for row in fin.read().split('\n')]
+
+    return data
