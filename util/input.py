@@ -34,3 +34,10 @@ def read_string_parts(filepath: str) -> List[str]:
         data = fin.read().split('\n\n')
 
     return data
+
+
+def read_matrix_str(filepath: str) -> List[List[str]]:
+    with open(filepath, 'r') as fin:
+        data = [[char for char in row] for row in fin.read().split('\n')]
+
+    return data
