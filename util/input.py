@@ -29,6 +29,13 @@ def read_matrix(filepath: str) -> List[List[int]]:
     return data
 
 
+def read_matrix_num(filepath: str) -> List[List[int]]:
+    with open(filepath, 'r') as fin:
+        data = [[int(number) for number in row.split()] for row in fin.read().split('\n')]
+
+    return data
+
+
 def read_string_parts(filepath: str) -> List[str]:
     with open(filepath, 'r') as fin:
         data = fin.read().split('\n\n')
